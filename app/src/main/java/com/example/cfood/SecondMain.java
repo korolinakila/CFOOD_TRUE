@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -31,6 +32,7 @@ public class SecondMain extends AppCompatActivity {
 
             @Override
             public void run() {
+
                 try {
                     String api_url = "https://api.calorieninjas.com/v1/nutrition?query=";
                     String query = "pasta";
@@ -56,17 +58,14 @@ public class SecondMain extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(jsonText);
                             JSONArray items = jsonObject.getJSONArray("items");
                             JSONObject item = (JSONObject) items.get(0);
-                            double calories = item.getDouble("calories");
-                            System.out.println(calories);}
-                        button.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                int soccer = Integer.parseInt(inputText.getText().toString());
+                            double cl = item.getDouble("calories");
+                            setOnClick(button, cl);
+                            System.out.println(cl);}
 
-                                textView.setText("Количество калорий:"+ soccer);
 
-                            }
-                        });
+
+
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -79,5 +78,21 @@ public class SecondMain extends AppCompatActivity {
         thread.start();
 
 
+    }
+    public int Path_forty(double food, int mass){ //возвращает кол-во грамм для 40% от заданного кол-ва каллорий
+        double path_mass = mass*0.4;
+        double path_forty = (100*path_mass)/food;
+        return (int) Math.round(path_forty);
+    }
+    private void setOnClick(final Button button, final double calories){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int soccer = Integer.parseInt(inputText.getText().toString());
+
+                textView.setText("Количество калорий:"+ Path_forty(calories, soccer));
+
+            }
+        });
     }
 }

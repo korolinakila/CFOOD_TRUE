@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation ("org.apache.commons:commons-math3:3.6.1")
     implementation ("org.json:json:20200518")
     implementation("androidx.appcompat:appcompat:+")
     implementation("com.google.android.material:material:1.10.0")
