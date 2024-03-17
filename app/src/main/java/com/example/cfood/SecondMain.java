@@ -6,6 +6,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,9 +21,10 @@ import org.json.JSONObject;
 
 public class SecondMain extends AppCompatActivity {
     TextView textView;
-    Button button;
+    Button button, switcher2;
     EditText inputText;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,7 @@ public class SecondMain extends AppCompatActivity {
         textView =  findViewById(R.id.textView);
         button =  findViewById(R.id.button);
         inputText = findViewById(R.id.inputText);
+        switcher2 = findViewById(R.id.switcher2);
         Thread thread = new Thread(new Runnable() {
 
             @Override
@@ -59,8 +64,11 @@ public class SecondMain extends AppCompatActivity {
                             JSONArray items = jsonObject.getJSONArray("items");
                             JSONObject item = (JSONObject) items.get(0);
                             double cl = item.getDouble("calories");
+                            int soccer = Integer.parseInt(inputText.getText().toString());
+                            setOnClick_switch(Path_forty(cl, soccer));
                             setOnClick(button, cl);
                             System.out.println(cl);}
+
 
 
 
@@ -94,5 +102,20 @@ public class SecondMain extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void setOnClick_switch(int cl){
+        switcher2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Perehod(cl);
+            }
+        });
+    }
+
+    public void Perehod(int cl){
+        Intent intent = new Intent(this, ThirdMain.class);
+        intent.putExtra("callor", cl);
+        startActivity(intent);
     }
 }
