@@ -19,5 +19,7 @@ public class ThirdMain extends AppCompatActivity {
         Intent intent = getIntent();
         int cl = intent.getIntExtra("callor", 0);
         second_z.setText("Макароны:"  +cl+ "гр");
+        first_z.setText("Суп:"  +cl/40*45+ "гр");
+        third_z.setText("Салат:"  +cl/40*15+ "гр");
     }
 }

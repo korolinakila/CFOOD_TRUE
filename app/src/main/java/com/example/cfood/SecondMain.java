@@ -64,10 +64,11 @@ public class SecondMain extends AppCompatActivity {
                             JSONArray items = jsonObject.getJSONArray("items");
                             JSONObject item = (JSONObject) items.get(0);
                             double cl = item.getDouble("calories");
-                            int soccer = Integer.parseInt(inputText.getText().toString());
-                            setOnClick_switch(Path_forty(cl, soccer));
+                            System.out.println("adsd");
                             setOnClick(button, cl);
-                            System.out.println(cl);}
+                            System.out.println("2222");
+                            System.out.println(cl);
+                        }
 
 
 
@@ -98,10 +99,15 @@ public class SecondMain extends AppCompatActivity {
             public void onClick(View v) {
                 int soccer = Integer.parseInt(inputText.getText().toString());
 
-                textView.setText("Количество калорий:"+ Path_forty(calories, soccer));
+                textView.setText("Количество калорий:"+soccer);
+                System.out.println(soccer + "ffffff");
+                setOnClick_switch(Path_forty(calories, soccer));
+
 
             }
         });
+
+
     }
 
     private void setOnClick_switch(int cl){
