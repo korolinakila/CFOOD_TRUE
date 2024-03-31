@@ -47,4 +47,89 @@
         app:layout_constraintEnd_toEndOf="@+id/second_z"
         app:layout_constraintStart_toStartOf="@+id/second_z"
         app:layout_constraintTop_toBottomOf="@+id/second_z" />
+
+    <TextView
+        android:id="@+id/obed"
+        android:layout_width="77dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:text="Обед"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
+    <TextView
+        android:id="@+id/second_o"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="84dp"
+        android:text="Макароны:"
+        app:layout_constraintBottom_toBottomOf="@+id/obed"
+        app:layout_constraintStart_toEndOf="@+id/obed"
+        app:layout_constraintTop_toTopOf="@+id/obed"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/first_o"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:text="Суп:"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_o"
+        app:layout_constraintEnd_toEndOf="@+id/second_o"
+        app:layout_constraintStart_toStartOf="@+id/second_o" />
+
+    <TextView
+        android:id="@+id/third_o"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:text="Салат:"
+        app:layout_constraintEnd_toEndOf="@+id/second_o"
+        app:layout_constraintStart_toStartOf="@+id/second_o"
+        app:layout_constraintTop_toBottomOf="@+id/second_o" />
+
+    <TextView
+        android:id="@+id/dinner"
+        android:layout_width="77dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:text="Ужин"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843" />
+
+    <TextView
+        android:id="@+id/second_d"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginStart="84dp"
+        android:text="Макароны:"
+        app:layout_constraintBottom_toBottomOf="@+id/dinner"
+        app:layout_constraintStart_toEndOf="@+id/dinner"
+        app:layout_constraintTop_toTopOf="@+id/dinner"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/first_d"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:text="Суп:"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_d"
+        app:layout_constraintEnd_toEndOf="@+id/second_d"
+        app:layout_constraintStart_toStartOf="@+id/second_d" />
+
+    <TextView
+        android:id="@+id/third_d"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:text="Салат:"
+        app:layout_constraintEnd_toEndOf="@+id/second_d"
+        app:layout_constraintStart_toStartOf="@+id/second_d"
+        app:layout_constraintTop_toBottomOf="@+id/second_d" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
