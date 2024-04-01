@@ -45,106 +45,106 @@ public class SecondMain extends AppCompatActivity {
 
         HashMap<String, Double> zavtrak_f = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_f.put("oatmeal", 69.6);
-        zavtrak_f.put("pancakes", 230.7);
-        zavtrak_f.put("cereals", 369.6);
+        zavtrak_f.put("Овсянка", 69.6);
+        zavtrak_f.put("Блины", 230.7);
+        zavtrak_f.put("Хлопья", 369.6);
 
 
         HashMap<String, Double> zavtrak_s = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_s.put("yogurt", 64.2);
-        zavtrak_s.put("sandwich", 269.5);
-        zavtrak_s.put("banana", 89.4);
+        zavtrak_s.put("Йогурт", 64.2);
+        zavtrak_s.put("Сэндвич", 269.5);
+        zavtrak_s.put("Банан", 89.4);
 
 
         HashMap<String, Double> zavtrak_t = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_t.put("juice", 53.7);
-        zavtrak_t.put("smoothie", 79.7);
-        zavtrak_t.put("milk", 51.3);
+        zavtrak_t.put("Сок", 53.7);
+        zavtrak_t.put("Смузи", 79.7);
+        zavtrak_t.put("Молоко", 51.3);
 
 
         HashMap<String, Double> obed_f = new HashMap<>();
         // Добавление элементов в словарь
-        obed_f.put("new england clam chowder", 80.5);
-        obed_f.put("noodle soup", 25.1);
-        obed_f.put("chicken tortilla soup", 52.4);
+        obed_f.put("Суп-пюре из моллюсков", 80.5);
+        obed_f.put("Суп с лапшой", 25.1);
+        obed_f.put("Куриный суп-тортилья", 52.4);
 
 
         HashMap<String, Double> obed_s = new HashMap<>();
         // Добавление элементов в словарь
-        obed_s.put("pasta", 156.);
-        obed_s.put("rice", 127.4);
-        obed_s.put("pelmeni", 208.7);
+        obed_s.put("Макароны", 156.);
+        obed_s.put("Рис", 127.4);
+        obed_s.put("Пельмени", 208.7);
 
 
         HashMap<String, Double> obed_t = new HashMap<>();
         // Добавление элементов в словарь
-        obed_t.put("tomato juice", 17.3);
-        obed_t.put("salad", 23.6);
-        obed_t.put("ice cream", 207.1);
+        obed_t.put("Томатный сок", 17.3);
+        obed_t.put("Салат", 23.6);
+        obed_t.put("Мороженое", 207.1);
 
 
         HashMap<String, Double> dinner_f = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_f.put("curry", 101.);
-        dinner_f.put("lasagna", 157.7);
-        dinner_f.put("ratatouille", 58.3);
+        dinner_f.put("Карри", 101.);
+        dinner_f.put("Лазанья", 157.7);
+        dinner_f.put("Рататуй", 58.3);
 
 
         HashMap<String, Double> dinner_s = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_s.put("steak", 273.4);
-        dinner_s.put("baked potato", 94.8);
-        dinner_s.put("tacos", 205.5);
+        dinner_s.put("Стэйк", 273.4);
+        dinner_s.put("Печеный картофель", 94.8);
+        dinner_s.put("Тако", 205.5);
 
 
         HashMap<String, Double> dinner_t = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_t.put("hot chocolate", 54.2);
-        dinner_t.put("lemonade", 38.9);
-        dinner_t.put("red wine", 87.3);
+        dinner_t.put("Горячий шоколад", 54.2);
+        dinner_t.put("Лимонад", 38.9);
+        dinner_t.put("Красное вино", 87.3);
 
 
 
 
         if (milk){
-            zavtrak_f.remove("cereals",369.6);
-            zavtrak_s.remove("yogurt", 64.2);
-            zavtrak_t.remove("milk", 51.3);
-            obed_t.remove("ice cream", 207.1);
+            zavtrak_f.remove("Хлопья",369.6);
+            zavtrak_s.remove("Йогурт", 64.2);
+            zavtrak_t.remove("Молоко", 51.3);
+            obed_t.remove("Мороженое", 207.1);
 
         }
         if (alco){
-            dinner_t.remove("red wine", 87.3);
+            dinner_t.remove("Красное вино", 87.3);
         }
         if (fruit){
-            zavtrak_s.remove("banana", 89.4);
-            zavtrak_t.remove("juice", 53.7);
+            zavtrak_s.remove("Банан", 89.4);
+            zavtrak_t.remove("Сок", 53.7);
 
         }
         if (vegetables){
 
-            obed_f.remove("new england clam chowder", 80.5);
-            obed_f.remove("noodle soup", 25.1);
+            obed_f.remove("Суп-пюре из моллюсков", 80.5);
+            obed_f.remove("Суп с лапшой", 25.1);
 
-            obed_t.remove("tomato juice", 17.3);
+            obed_t.remove("Томатный сок", 17.3);
 
 
-            dinner_f.remove("ratatouille", 58.3);
-            dinner_s.remove("baked potato", 94.8);
+            dinner_f.remove("Рататуй", 58.3);
+            dinner_s.remove("Печеный картофель", 94.8);
 
         }
         if(chocolate){
-            dinner_t.remove("hot chocolate", 54.2);
+            dinner_t.remove("Горячий шоколад", 54.2);
         }
         if (gluten){
-            dinner_s.remove("tacos", 205.5);
-            zavtrak_f.remove("pancakes", 230.7);
+            dinner_s.remove("Тако", 205.5);
+            zavtrak_f.remove("Блины", 230.7);
         }
 
         if (nut){
-            dinner_f.remove("curry", 101.);
+            dinner_f.remove("Карри", 101.);
         }
 
         List<String> keys_z_f = new ArrayList<>(zavtrak_f.keySet());
@@ -247,11 +247,16 @@ public class SecondMain extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int soccer = Integer.parseInt(inputText.getText().toString());
+                try {
+                    int soccer = Integer.parseInt(inputText.getText().toString());
+                    textView.setText("Количество калорий:" + soccer);
+                    setOnClick_switch(Path_fivty(calories1, soccer), name_1, Path_thirty(calories2, soccer), name_2, Path_ten(calories3, soccer), name_3, Path_fivty(calories4, soccer), name_4, Path_thirty(calories5, soccer), name_5, Path_ten(calories6, soccer), name_6, Path_fivty(calories7, soccer), name_7, Path_thirty(calories8, soccer), name_8, Path_ten(calories9, soccer), name_9);
 
-                textView.setText("Количество калорий:"+soccer);
-                System.out.println(soccer + "ffffff");
-                setOnClick_switch(Path_fivty(calories1, soccer), name_1, Path_thirty(calories2, soccer), name_2, Path_ten(calories3, soccer), name_3, Path_fivty(calories4, soccer), name_4, Path_thirty(calories5, soccer), name_5, Path_ten(calories6, soccer), name_6, Path_fivty(calories7, soccer), name_7, Path_thirty(calories8, soccer), name_8, Path_ten(calories9, soccer), name_9);
+                } catch (NumberFormatException e) {
+                    // Обработка исключения, если ввод не удалось преобразовать в число
+                    textView.setText("Ошибка: Введите корректное число");
+                }
+
 
 
             }
