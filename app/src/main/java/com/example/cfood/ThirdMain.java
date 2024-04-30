@@ -7,6 +7,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -83,6 +84,7 @@ public class ThirdMain extends AppCompatActivity {
                 break;
             case "Банан":
                 link2.setText("Продается на рынке");
+
                 break;
             case "Картофельное пюре":
                 link2.setText("https://www.povarenok.ru/recipes/show/145494/");
@@ -101,6 +103,7 @@ public class ThirdMain extends AppCompatActivity {
                 break;
             case "Молоко":
                 link3.setText("Продается на рынке");
+
                 break;
             case "Картофельное пюре":
                 link3.setText("https://www.povarenok.ru/recipes/show/145494/");
@@ -204,6 +207,8 @@ public class ThirdMain extends AppCompatActivity {
                 break;
             case "Красное вино":
                 link9.setText("Продается в алкомаркетах");
+
+
                 break;
             case "Картофельное пюре":
                 link9.setText("https://www.povarenok.ru/recipes/show/145494/");
