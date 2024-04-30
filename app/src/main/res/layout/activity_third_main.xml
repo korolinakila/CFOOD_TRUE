@@ -17,11 +17,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141" />
 
+
     <TextView
         android:id="@+id/second_z"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="60dp"
         android:text="Макароны:"
         app:layout_constraintBottom_toBottomOf="@+id/zavtrak"
         app:layout_constraintStart_toEndOf="@+id/zavtrak"
@@ -32,8 +33,8 @@
         android:id="@+id/first_z"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="Суп:"
         android:layout_marginBottom="44dp"
+        android:text="Суп:"
         app:layout_constraintBottom_toTopOf="@+id/second_z"
         app:layout_constraintEnd_toEndOf="@+id/second_z"
         app:layout_constraintStart_toStartOf="@+id/second_z" />
@@ -52,7 +53,8 @@
         android:id="@+id/obed"
         android:layout_width="77dp"
         android:layout_height="33dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
+        android:clickable="true"
         android:text="Обед"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +65,7 @@
         android:id="@+id/second_o"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="60dp"
         android:text="Макароны:"
         app:layout_constraintBottom_toBottomOf="@+id/obed"
         app:layout_constraintStart_toEndOf="@+id/obed"
@@ -74,8 +76,8 @@
         android:id="@+id/first_o"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="Суп:"
         android:layout_marginBottom="44dp"
+        android:text="Суп:"
         app:layout_constraintBottom_toTopOf="@+id/second_o"
         app:layout_constraintEnd_toEndOf="@+id/second_o"
         app:layout_constraintStart_toStartOf="@+id/second_o" />
@@ -94,7 +96,7 @@
         android:id="@+id/dinner"
         android:layout_width="77dp"
         android:layout_height="33dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
         android:text="Ужин"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +107,7 @@
         android:id="@+id/second_d"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="60dp"
         android:text="Макароны:"
         app:layout_constraintBottom_toBottomOf="@+id/dinner"
         app:layout_constraintStart_toEndOf="@+id/dinner"
@@ -116,8 +118,8 @@
         android:id="@+id/first_d"
         android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:text="Суп:"
         android:layout_marginBottom="44dp"
+        android:text="Суп:"
         app:layout_constraintBottom_toTopOf="@+id/second_d"
         app:layout_constraintEnd_toEndOf="@+id/second_d"
         app:layout_constraintStart_toStartOf="@+id/second_d" />
@@ -131,5 +133,144 @@
         app:layout_constraintEnd_toEndOf="@+id/second_d"
         app:layout_constraintStart_toStartOf="@+id/second_d"
         app:layout_constraintTop_toBottomOf="@+id/second_d" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="96dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/second_o"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/first_d"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/link9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/third_d"
+        app:layout_constraintStart_toStartOf="@+id/third_d"
+        app:layout_constraintTop_toBottomOf="@+id/third_d" />
+
+    <TextView
+        android:id="@+id/link8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/second_d"
+        app:layout_constraintStart_toStartOf="@+id/second_d"
+        app:layout_constraintTop_toBottomOf="@+id/second_d" />
+
+    <TextView
+        android:id="@+id/link7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/first_d"
+        app:layout_constraintStart_toStartOf="@+id/first_d"
+        app:layout_constraintTop_toBottomOf="@+id/first_d" />
+
+    <TextView
+        android:id="@+id/link6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="сслыка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/third_o"
+        app:layout_constraintStart_toStartOf="@+id/third_o"
+        app:layout_constraintTop_toBottomOf="@+id/third_o" />
+
+
+
+    <TextView
+        android:id="@+id/link4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/first_o"
+        app:layout_constraintStart_toStartOf="@+id/first_o"
+        app:layout_constraintTop_toBottomOf="@+id/first_o" />
+
+    <TextView
+        android:id="@+id/link5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/second_o"
+        app:layout_constraintStart_toStartOf="@+id/second_o"
+        app:layout_constraintTop_toBottomOf="@+id/second_o" />
+
+    <TextView
+        android:id="@+id/link3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/third_z"
+        app:layout_constraintStart_toStartOf="@+id/third_z"
+        app:layout_constraintTop_toBottomOf="@+id/third_z"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/link2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/second_z"
+        app:layout_constraintStart_toStartOf="@+id/second_z"
+        app:layout_constraintTop_toBottomOf="@+id/second_z" />
+
+    <TextView
+        android:id="@+id/link1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ссылка"
+        android:autoLink="web"
+        android:clickable="true"
+        android:onClick="copyToClipboard"
+        app:layout_constraintEnd_toEndOf="@+id/first_z"
+        app:layout_constraintStart_toStartOf="@+id/first_z"
+        app:layout_constraintTop_toBottomOf="@+id/first_z" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

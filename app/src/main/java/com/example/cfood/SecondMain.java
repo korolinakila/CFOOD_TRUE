@@ -10,7 +10,6 @@ import java.util.Random;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.BoringLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,112 +38,145 @@ public class SecondMain extends AppCompatActivity {
         boolean vegetables = intent.getBooleanExtra("vegetables", false);
         boolean chocolate = intent.getBooleanExtra("chocolate", false);
         boolean gluten = intent.getBooleanExtra("gluten", false);
-        boolean egg = intent.getBooleanExtra("egg", false);
+        boolean hot = intent.getBooleanExtra("hot", false);
         boolean nut = intent.getBooleanExtra("nut", false);
         Random random = new Random();
 
+
+        List<HashMap<String, Double>> listOfDictionaries = new ArrayList<>();
+
+
         HashMap<String, Double> zavtrak_f = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_f.put("Овсянка", 69.6);
-        zavtrak_f.put("Блины", 230.7);
-        zavtrak_f.put("Хлопья", 369.6);
+        zavtrak_f.put("Овсянка", 64.);//https://www.povarenok.ru/recipes/show/41496/
+        zavtrak_f.put("Блины", 123.1);//https://www.povarenok.ru/recipes/show/52956/
+        zavtrak_f.put("Омлет по-французски", 132.2);//https://www.povarenok.ru/recipes/show/115815/
+        listOfDictionaries.add(zavtrak_f);
 
 
         HashMap<String, Double> zavtrak_s = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_s.put("Йогурт", 64.2);
-        zavtrak_s.put("Сэндвич", 269.5);
-        zavtrak_s.put("Банан", 89.4);
+        zavtrak_s.put("Йогурт", 197.4);//https://www.povarenok.ru/recipes/show/58852/
+        zavtrak_s.put("Сэндвич", 185.5);//https://www.povarenok.ru/recipes/show/81135/
+        zavtrak_s.put("Банан", 121.4);//
+        listOfDictionaries.add(zavtrak_s);
 
 
         HashMap<String, Double> zavtrak_t = new HashMap<>();
         // Добавление элементов в словарь
-        zavtrak_t.put("Сок", 53.7);
-        zavtrak_t.put("Смузи", 79.7);
-        zavtrak_t.put("Молоко", 51.3);
+        zavtrak_t.put("Сок", 95.);//https://www.povarenok.ru/recipes/show/112265/
+        zavtrak_t.put("Бананово-клубничный смузи", 70.5);//https://www.povarenok.ru/recipes/show/64746/
+        zavtrak_t.put("Молоко", 64.3);//
+        listOfDictionaries.add(zavtrak_t);
 
 
         HashMap<String, Double> obed_f = new HashMap<>();
         // Добавление элементов в словарь
-        obed_f.put("Суп-пюре из моллюсков", 80.5);
-        obed_f.put("Суп с лапшой", 25.1);
-        obed_f.put("Куриный суп-тортилья", 52.4);
+        obed_f.put("Суп-пюре Пармантье",151.3);//https://www.povarenok.ru/recipes/show/51437/
+        obed_f.put("Суп с лапшой", 119.7); //https://www.povarenok.ru/recipes/show/159653/
+        obed_f.put("Суп торговца скота из Тапеи", 142.9); //https://www.povarenok.ru/recipes/show/43754/
+        listOfDictionaries.add(obed_f);
 
 
         HashMap<String, Double> obed_s = new HashMap<>();
         // Добавление элементов в словарь
-        obed_s.put("Макароны", 156.);
-        obed_s.put("Рис", 127.4);
-        obed_s.put("Пельмени", 208.7);
+        obed_s.put("Макароны с сыром", 150.4);//https://www.povarenok.ru/recipes/show/113360/
+        obed_s.put("Плов", 228.3);//https://www.povarenok.ru/recipes/show/26049/
+        obed_s.put("Пельмени", 179.1);//https://www.povarenok.ru/recipes/show/75234/
+        listOfDictionaries.add(obed_s);
 
 
         HashMap<String, Double> obed_t = new HashMap<>();
         // Добавление элементов в словарь
-        obed_t.put("Томатный сок", 17.3);
-        obed_t.put("Салат", 23.6);
-        obed_t.put("Мороженое", 207.1);
+        obed_t.put("Компот из сухофруктов", 32.9);//https://www.povarenok.ru/recipes/show/100770/
+        obed_t.put("Салат Глехурад", 100.4);//https://www.povarenok.ru/recipes/show/91200/
+        obed_t.put("Мороженое крем-брюле", 87.8);//https://www.povarenok.ru/recipes/show/57956/
+        listOfDictionaries.add(obed_t);
 
 
         HashMap<String, Double> dinner_f = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_f.put("Карри", 101.);
-        dinner_f.put("Лазанья", 157.7);
-        dinner_f.put("Рататуй", 58.3);
+        dinner_f.put("Цыплeнок-карри", 148.1);//https://www.povarenok.ru/recipes/show/51375/
+        dinner_f.put("Лазанья", 105.2);//https://www.povarenok.ru/recipes/show/14005/
+        dinner_f.put("Рататуй", 92.6);//https://www.povarenok.ru/recipes/show/168078/
+        listOfDictionaries.add(dinner_f);
 
 
         HashMap<String, Double> dinner_s = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_s.put("Стэйк", 273.4);
-        dinner_s.put("Печеный картофель", 94.8);
-        dinner_s.put("Тако", 205.5);
+        dinner_s.put("Стэйк", 184.8);//https://www.povarenok.ru/recipes/show/138773/
+        dinner_s.put("Картофель по деревенски", 172.5);//https://www.povarenok.ru/recipes/show/46837/
+        dinner_s.put("Тако с морепродуктами", 161.4);//https://www.povarenok.ru/recipes/show/63998/
+        listOfDictionaries.add(dinner_s);
 
 
         HashMap<String, Double> dinner_t = new HashMap<>();
         // Добавление элементов в словарь
-        dinner_t.put("Горячий шоколад", 54.2);
-        dinner_t.put("Лимонад", 38.9);
-        dinner_t.put("Красное вино", 87.3);
+        dinner_t.put("Пряный горячий шоколад", 90.5);//https://www.povarenok.ru/recipes/show/154467/
+        dinner_t.put("Лимонад", 40.3);//https://www.povarenok.ru/recipes/show/57853/
+        dinner_t.put("Красное вино", 87.3);//
+        listOfDictionaries.add(dinner_t);
 
 
 
 
         if (milk){
-            zavtrak_f.remove("Хлопья",369.6);
-            zavtrak_s.remove("Йогурт", 64.2);
-            zavtrak_t.remove("Молоко", 51.3);
-            obed_t.remove("Мороженое", 207.1);
+            zavtrak_f.remove("Овсянка", 64.);
+            zavtrak_f.remove("Блины", 123.1);
+            zavtrak_s.remove("Йогурт", 197.4);
+            zavtrak_t.remove("Молоко", 64.3);
+            obed_s.remove("Макароны с сыром", 150.4);
+            obed_t.remove("Мороженое крем-брюле", 87.8);
+            dinner_f.remove("Лазанья", 105.2);
+            dinner_t.remove("Пряный горячий шоколад", 90.5);
+            zavtrak_t.remove("Молоко", 64.3);
+
 
         }
         if (alco){
             dinner_t.remove("Красное вино", 87.3);
         }
         if (fruit){
-            zavtrak_s.remove("Банан", 89.4);
-            zavtrak_t.remove("Сок", 53.7);
+            zavtrak_s.remove("Банан", 121.4);
+            zavtrak_t.remove("Сок", 95.);
+            obed_t.remove("Компот из сухофруктов", 32.9);
 
         }
         if (vegetables){
-
-            obed_f.remove("Суп-пюре из моллюсков", 80.5);
-            obed_f.remove("Суп с лапшой", 25.1);
-
-            obed_t.remove("Томатный сок", 17.3);
-
-
-            dinner_f.remove("Рататуй", 58.3);
-            dinner_s.remove("Печеный картофель", 94.8);
-
+            obed_f.remove("Суп торговца скота из Тапеи", 142.9);
+            obed_s.remove("Макароны с сыром", 150.4);
         }
         if(chocolate){
-            dinner_t.remove("Горячий шоколад", 54.2);
+            dinner_t.remove("Пряный горячий шоколад", 90.5);
         }
         if (gluten){
-            dinner_s.remove("Тако", 205.5);
-            zavtrak_f.remove("Блины", 230.7);
+            zavtrak_t.remove("Бананово-клубничный смузи", 70.5);
         }
 
         if (nut){
-            dinner_f.remove("Карри", 101.);
+            obed_t.remove("Салат Глехурад", 100.4);
+        }
+        if (hot){
+            dinner_f.remove("Цыплeнок-карри", 148.1);
+            dinner_s.remove("Стэйк", 184.8);
+            dinner_s.remove("Тако с морепродуктами", 161.4);
+        }
+        if (soy){
+            obed_s.remove("Макароны с сыром", 150.4);
+            dinner_f.remove("Рататуй", 92.6);
+            dinner_s.remove("Стэйк", 184.8);
+        }
+        if (fish){
+            zavtrak_s.remove("Сэндвич", 185.5);
+            dinner_s.remove("Тако с морепродуктами", 161.4);
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+        for (HashMap dic : listOfDictionaries) {
+            if (dic.isEmpty()){
+                dic.put("Картофельное пюре", 120.);//https://www.povarenok.ru/recipes/show/145494/
+                dic.put("Похлебка по-деревенски", 87.8);//https://www.povarenok.ru/recipes/show/97254/
+            }
         }
 
         List<String> keys_z_f = new ArrayList<>(zavtrak_f.keySet());
@@ -160,6 +192,12 @@ public class SecondMain extends AppCompatActivity {
         List<String> keys_z_t = new ArrayList<>(zavtrak_t.keySet());
         int randomIndex_z_t = random.nextInt(keys_z_t.size());
         String randomKey_z_t = keys_z_t.get(randomIndex_z_t);
+        if (randomKey_z_t == randomKey_z_s){
+            while (randomKey_z_t == randomKey_z_s){
+                randomIndex_z_t = random.nextInt(keys_z_t.size());
+                randomKey_z_t = keys_z_t.get(randomIndex_z_t);
+            }
+        }
         double randomValue_z_t = zavtrak_t.get(randomKey_z_t);
 
         List<String> keys_o_f = new ArrayList<>(obed_f.keySet());
@@ -193,6 +231,7 @@ public class SecondMain extends AppCompatActivity {
         double randomValue_d_t = dinner_t.get(randomKey_d_t);
 
 
+        String finalRandomKey_z_t = randomKey_z_t;
         Thread thread = new Thread(new Runnable() {
 
             @Override
@@ -203,7 +242,7 @@ public class SecondMain extends AppCompatActivity {
 
                     try {
 
-                            setOnClick(button, randomValue_z_f, randomKey_z_f, randomValue_z_s, randomKey_z_s, randomValue_z_t, randomKey_z_t, randomValue_o_f, randomKey_o_f, randomValue_o_s, randomKey_o_s, randomValue_o_t, randomKey_o_t, randomValue_d_f, randomKey_d_f, randomValue_d_s, randomKey_d_s, randomValue_d_t, randomKey_d_t);
+                            setOnClick(button, randomValue_z_f, randomKey_z_f, randomValue_z_s, randomKey_z_s, randomValue_z_t, finalRandomKey_z_t, randomValue_o_f, randomKey_o_f, randomValue_o_s, randomKey_o_s, randomValue_o_t, randomKey_o_t, randomValue_d_f, randomKey_d_f, randomValue_d_s, randomKey_d_s, randomValue_d_t, randomKey_d_t);
 
 
                     } catch (Exception e) {
@@ -226,20 +265,20 @@ public class SecondMain extends AppCompatActivity {
 
 
 
-    public int Path_fivty(double food, int mass){ //возвращает кол-во грамм для 50% от заданного кол-ва каллорий
-        double path_mass = mass*0.55;
+    public int Path_forty(double food, int mass){ //возвращает кол-во грамм для 40% от заданного кол-ва каллорий
+        double path_mass = mass*0.4;
         double path_forty = (100*path_mass)/food;
         return (int) Math.round(path_forty);
     }
 
-    public int Path_thirty(double food, int mass){ //возвращает кол-во грамм для 40% от заданного кол-ва каллорий
-        double path_mass = mass*0.35;
+    public int Path_fivty(double food, int mass){ //возвращает кол-во грамм для 50% от заданного кол-ва каллорий
+        double path_mass = mass*0.5;
         double path_thirty = (100*path_mass)/food;
         return (int) Math.round(path_thirty);
     }
 
-    public int Path_ten(double food, int mass){ //возвращает кол-во грамм для 40% от заданного кол-ва каллорий
-        double path_mass = mass*0.10;
+    public int Path_ten(double food, int mass){ //возвращает кол-во грамм для 10% от заданного кол-ва каллорий
+        double path_mass = mass*0.1;
         double path_fifteen = (100*path_mass)/food;
         return (int) Math.round(path_fifteen);
     }
@@ -250,7 +289,7 @@ public class SecondMain extends AppCompatActivity {
                 try {
                     int soccer = Integer.parseInt(inputText.getText().toString());
                     textView.setText("Количество калорий:" + soccer);
-                    setOnClick_switch(Path_fivty(calories1, soccer), name_1, Path_thirty(calories2, soccer), name_2, Path_ten(calories3, soccer), name_3, Path_fivty(calories4, soccer), name_4, Path_thirty(calories5, soccer), name_5, Path_ten(calories6, soccer), name_6, Path_fivty(calories7, soccer), name_7, Path_thirty(calories8, soccer), name_8, Path_ten(calories9, soccer), name_9);
+                    setOnClick_switch(Path_forty(calories1, soccer), name_1, Path_fivty(calories2, soccer), name_2, Path_ten(calories3, soccer), name_3, Path_forty(calories4, soccer), name_4, Path_fivty(calories5, soccer), name_5, Path_ten(calories6, soccer), name_6, Path_forty(calories7, soccer), name_7, Path_fivty(calories8, soccer), name_8, Path_ten(calories9, soccer), name_9);
 
                 } catch (NumberFormatException e) {
                     // Обработка исключения, если ввод не удалось преобразовать в число

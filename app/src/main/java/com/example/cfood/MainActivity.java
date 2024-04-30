@@ -2,6 +2,7 @@ package com.example.cfood;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     TextView greeting, offer;
     Button  switcher;
 
-    CheckBox milk, alco, soy, fish, fruit, vegetables, chocolate, gluten, egg, nut;
+    CheckBox milk, alco, soy, fish, fruit, vegetables, chocolate, gluten, hot, nut;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         milk = findViewById(R.id.milk);
         chocolate = findViewById(R.id.chocolate);
         alco = findViewById(R.id.alco);
-        egg = findViewById(R.id.egg);
+        hot = findViewById(R.id.hot);
         soy = findViewById(R.id.soy);
         vegetables = findViewById(R.id.vegetables);
         fruit = findViewById(R.id.fruit);
@@ -114,12 +116,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        egg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        hot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
 
-                    intent.putExtra("egg", true);
+                    intent.putExtra("hot", true);
 
                 }
             }

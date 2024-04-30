@@ -45,11 +45,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/egg"
+        android:id="@+id/hot"
         android:layout_width="103dp"
         android:layout_height="43dp"
         android:layout_marginTop="532dp"
-        android:text="яйца"
+        android:text="острое"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,7 @@
         android:layout_width="92dp"
         android:layout_height="46dp"
         android:layout_marginTop="292dp"
-        android:text="глютен"
+        android:text="мёд"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="292dp"
-        android:text="овощи"
+        android:text="грибы"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toStartOf="parent"
