@@ -207,8 +207,6 @@ public class ThirdMain extends AppCompatActivity {
                 break;
             case "Красное вино":
                 link9.setText("Продается в алкомаркетах");
-
-
                 break;
             case "Картофельное пюре":
                 link9.setText("https://www.povarenok.ru/recipes/show/145494/");
