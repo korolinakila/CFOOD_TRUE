@@ -28,7 +28,7 @@
         android:layout_width="406dp"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="Выберите продукты, которые вы НЕ предпочитаете употреблять в пищу:"
+        android:text="Укажите продукты, которые вы НЕ УПОТРЕБЛЯЕТЕ:"
         android:textSize="17dp"
         android:textColor="@color/black"
         android:fontFamily="@font/fontramona"

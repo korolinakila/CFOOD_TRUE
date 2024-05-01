@@ -174,6 +174,7 @@ public class SecondMain extends AppCompatActivity {
 
         for (HashMap dic : listOfDictionaries) {
             if (dic.isEmpty()){
+                System.out.println("*");
                 dic.put("Картофельное пюре", 120.);//https://www.povarenok.ru/recipes/show/145494/
                 dic.put("Похлебка по-деревенски", 87.8);//https://www.povarenok.ru/recipes/show/97254/
             }

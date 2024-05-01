@@ -39,108 +39,11 @@ public class MainActivity extends AppCompatActivity {
         switcher = findViewById(R.id.button2);
         Intent intent = new Intent(this, SecondMain.class);
 
-        milk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
 
-                    intent.putExtra("milk", true);
-
-                }
-            }
-        });
-        alco.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("alco", true);
-
-                }
-            }
-        });
-        soy.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("soy", true);
-
-                }
-            }
-        });
-        fish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("fish", true);
-
-                }
-            }
-        });
-        fruit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("fruit", true);
-
-                }
-            }
-        });
-        vegetables.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("vegetables", true);
-
-                }
-            }
-        });
-        chocolate.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("chocolate", true);
-
-                }
-            }
-        });
-        gluten.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("gluten", true);
-
-                }
-            }
-        });
-        hot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("hot", true);
-
-                }
-            }
-        });
-        nut.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-
-                    intent.putExtra("nut", true);
-
-                }
-            }
-        });
         switcher.setOnClickListener(new View.OnClickListener() {
+
             @Override
+
             public void onClick(View v) {
                 Perehod(intent);
             }
@@ -149,6 +52,90 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Perehod(Intent intent){
 
+
+        if (milk.isChecked()) {
+            intent.putExtra("milk", true);
+        }
+        else{
+            if (intent.hasExtra("milk")) {
+                intent.removeExtra("milk");
+            }
+        }
+
+        if (alco.isChecked()) {
+            intent.putExtra("alco", true);
+        }
+        else{
+            if (intent.hasExtra("alco")) {
+                intent.removeExtra("alco");
+            }
+        }
+        if (soy.isChecked()) {
+            intent.putExtra("soy", true);
+        }
+        else{
+            if (intent.hasExtra("soy")) {
+                intent.removeExtra("soy");
+            }
+        }
+        if (fish.isChecked()) {
+            intent.putExtra("fish", true);
+        }
+        else{
+            if (intent.hasExtra("fish")) {
+                intent.removeExtra("fish");
+            }
+        }
+        if (fruit.isChecked()) {
+            intent.putExtra("fruit", true);
+        }
+        else{
+            if (intent.hasExtra("fruit")) {
+                intent.removeExtra("fruit");
+            }
+        }
+        if (vegetables.isChecked()) {
+            intent.putExtra("vegetables", true);
+        }
+        else{
+            if (intent.hasExtra("vegetables")) {
+                intent.removeExtra("vegetables");
+            }
+        }
+        if (chocolate.isChecked()) {
+            intent.putExtra("chocolate", true);
+        }
+        else{
+            if (intent.hasExtra("chocolate")) {
+                intent.removeExtra("chocolate");
+            }
+        }
+        if (gluten.isChecked()) {
+            intent.putExtra("gluten", true);
+        }
+        else{
+            if (intent.hasExtra("gluten")) {
+                intent.removeExtra("gluten");
+            }
+        }
+        if (hot.isChecked()) {
+            intent.putExtra("hot", true);
+        }
+        else{
+            if (intent.hasExtra("hot")) {
+                intent.removeExtra("hot");
+            }
+        }
+        if (nut.isChecked()) {
+            intent.putExtra("nut", true);
+        }
+        else{
+            if (intent.hasExtra("nut")) {
+                intent.removeExtra("nut");
+            }
+        }
+        System.out.println("end");
         startActivity(intent);
+
     }
 }
